@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app="helloWorldApp">
+<head>
+    <link rel="icon"
+          type="image/png"
+          href="img/hd-logo.png">
+    <title>The Home Depot Forecast Tool</title>
+
+    <base href="/">
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse" role="navigation" ng-controller="menuBar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/home" style="padding:0;color:#fff;margin-right:15px">
+                <span><img src="img/hd-logo.png" height="51" width="51" style="padding:10"></span>Forecast Tool</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li ng-class="{ active: isActive('/home')}">
+                    <a class="home" ng-click="active='home'" href="#/home">Home</a>
+                </li>
+            </ul>
+
+
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+
+
+<div ng-view class="container-fluid">
+    <div class="container text-center add-padding">
+        <i class="fa fa-spinner fa-3x fa-spin"></i>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted text-center ">
+            <span id="year">&copy;2015</span> Homer TLC, Inc. All Rights Reserved
+        </p>
+    </div>
+</footer>
+<!-- CSS -->
+<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="libs/angular-bootstrap/ui-bootstrap-csp.css">
+<!-- custom styles -->
+<link rel="stylesheet" href="css/sticky-footer.css">
+<link rel="stylesheet" href="css/app.css">
+
+
+<!-- JS LIBS -->
+
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular-route/angular-route.min.js"></script>
+<script src="libs/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="libs/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+<!-- Custom JS -->
+
+<script src="js/app.js"></script>
+<script src="js/controllers/homeController.js"></script>
+<script src="js/services/homeServices.js"></script>
+<script src="js/filters/homeFilters.js"></script>
+<script src="js/directives/homeDirectives.js"></script>
+
+
+</body>
+</html>
