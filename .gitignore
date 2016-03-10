@@ -39,3 +39,7 @@ db-migration
 config-dev.js
 manifest.yaml
 knexfile.js
+
+
+#Test report 
+test-report/
